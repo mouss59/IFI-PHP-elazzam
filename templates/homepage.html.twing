@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Tournaments!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+{% block body %}
+    <h1>
+        Tournaments management
+    </h1>
+    {{message}}
+    <ul>
+    {% for tournament in tournaments %}
+        <li>{{ tournament.name }}</li>
+    {% else %}
+        <li>No Tournaments</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+{% block javascripts %}{% endblock %}
+</body>
+</html>
